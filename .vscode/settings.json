@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "constants.h": "c"
+        "constants.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c"
     }
 }

@@ -1,10 +1,9 @@
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include "Constants.h"
-
-#define MAX_RAND 99
-#define MIN_RAND 0
 
 void FillDataFILE(const int SIZE);
 
@@ -24,11 +23,13 @@ void FillDataFILE(const int SIZE)
     if (SIZE == LARGE)
         file = fopen("dataLARGE.txt", "w");
     if (SIZE == MEDIUM)
-        F
-            file = fopen("dataMEDIUM.txt", "w");
+        file = fopen("dataMEDIUM.txt", "w");
     if (SIZE == LITTLE)
         file = fopen("dataLITTLE.txt", "w");
     for (int i = 0; i < SIZE; i++)
-        fprintf(file, "%d ", rand() % (MAX_RAND - MIN_RAND + 1) + MIN_RAND);
+    {
+        fprintf(file, "%d", rand() % (MAX_RAND - MIN_RAND + 1) + MIN_RAND);
+        fprintf(file, " ");
+    }
     fclose(file);
 }
